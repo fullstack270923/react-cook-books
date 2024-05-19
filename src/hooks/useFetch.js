@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 
 export const useFetch = (url, method = "GET") => {
+
+  // state
   const [data, setData] = useState(null)
   const [isPending, setIsPending] = useState(false)
   const [error, setError] = useState(null)
@@ -16,15 +18,16 @@ export const useFetch = (url, method = "GET") => {
     })
   }
 
+  // use-effect
   useEffect(() => {
     const controller = new AbortController()
 
     const fetchData = async (fetchOptions) => {
       setIsPending(true)
-      
+
       try {
         const res = await fetch(url, { ...fetchOptions, signal: controller.signal })
-        if(!res.ok) {
+        if (!res.ok) {
           throw new Error(res.statusText)
         }
         const data = await res.json()
@@ -37,7 +40,7 @@ export const useFetch = (url, method = "GET") => {
           console.log("the fetch was aborted")
         } else {
           setIsPending(false)
-          setError('Could not fetch the data')
+          setError('Could not fetch the data. make sure the json-server is running...')
         }
       }
     }
@@ -50,6 +53,7 @@ export const useFetch = (url, method = "GET") => {
       fetchData(options)
     }
 
+    // will unmount
     return () => {
       controller.abort()
     }

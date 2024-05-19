@@ -39,6 +39,8 @@ export default function Create() {
     }
   }, [data, history])
 
+  //<p>PWD: <input type="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[*]).{8,}$" required /></p>
+
   return (
     <div className="create">
       <h2 className="page-title">Add a New Recipe</h2>
@@ -67,7 +69,6 @@ export default function Create() {
           </div>
         </label>
         <p>Current ingredients: {ingredients.map(i => <em key={i}>{i}, </em>)}</p>
-
         <label>
           <span>Recipe Method:</span>
           <textarea 

@@ -38,25 +38,6 @@
       "cookingTime": "35 minutes"
     },
     {
-      "title": "hamburger",
-      "ingredients": [
-        "tofu",
-        "tomato"
-      ],
-      "method": "cook",
-      "cookingTime": "30 minutes",
-      "id": "v7xJrXh"
-    },
-    {
-      "title": "mango",
-      "ingredients": [
-        "mango"
-      ],
-      "method": "cut and server",
-      "cookingTime": "5 minutes",
-      "id": "pLYZzVT"
-    },
-    {
       "id": "4",
       "title": "Veggie vegas Pizza",
       "ingredients": [
@@ -67,18 +48,6 @@
       ],
       "method": "1. Pre-heat the oven to 200C/3C/gas 5. Add the pasata, green pepper and mushrooms to the base. Place the lid on the oven and cook for 30 minutes. 5. Serve with a slaw of your choice",
       "cookingTime": "35 minutes"
-    },
-    {
-      "title": "pizza mushrooms",
-      "ingredients": [
-        "tomato",
-        "mushrooms",
-        "oregano",
-        "bulgarit"
-      ],
-      "method": "roll the doe.",
-      "cookingTime": "45 minutes",
-      "id": "2gelqOh"
     }
   ]
 }
